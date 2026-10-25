@@ -1,0 +1,19 @@
+acl "labnet" {
+	192.168.20.0/24;
+	169.254.1.2;
+};
+
+options {
+	directory "/var/cache/bind";
+	recursion yes;
+	allow-recursion { labnet; localhost; };
+	allow-query { labnet; localhost; };
+	allow-query-cache { labnet; localhost; };
+	forwarders { 192.168.20.5; };
+	forward only;
+	listen-on { any; };
+	listen-on-v6 { none; };
+	version none;
+	hostname none;
+	server-id none;
+};

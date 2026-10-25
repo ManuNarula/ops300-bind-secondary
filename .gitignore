@@ -1,0 +1,25 @@
+#TSIG secrets
+*.key
+transfer.key
+tsig.key
+keys/
+
+#Credentials and authentication files
+*.pem
+*.p12
+*.pfx
+htpasswd
+.registry-auth.json
+auth.json
+credentials/
+
+#Private configuration
+*.jnl
+*.signed
+*.jbk
+*.nzf
+*.nzd
+
+#Editor files
+*.swp
+*~

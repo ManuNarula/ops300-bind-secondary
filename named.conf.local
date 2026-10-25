@@ -1,0 +1,19 @@
+server 192.168.20.10 { 
+	keys { "transferkey"; };
+};
+
+zone "lab.mnarula3.300.ops" {
+        type secondary;
+        file "/var/cache/bind/db.lab.mnarula3.300.ops";
+        primaries {
+                192.168.20.10;
+        };
+};
+
+zone "20.168.192.in-addr.arpa" {
+        type secondary;
+        file "/var/cache/bind/db.192.168.20";
+        primaries {
+                192.168.20.10;
+        };
+};
